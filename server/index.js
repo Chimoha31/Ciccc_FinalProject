@@ -25,6 +25,10 @@ mongoose.connect(mongo_URL, (err) => {
 });
 
 app.get("/", (req, res) => {
+    res.json("Server started")
+})
+
+app.get("/", (req, res) => {
     res.send("This is endpoint");
 });
 
