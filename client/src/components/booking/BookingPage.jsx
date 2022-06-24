@@ -37,7 +37,7 @@ const BookingPage = ({ bookingInfo }) => {
 
   useEffect(() => {
     handleBookSubmit();
-    console.log(bookingInfo);
+    // console.log(bookingInfo);
     // eslint-disable-next-line
   }, []);
 

@@ -41,7 +41,7 @@ const BookingList = () => {
   //     });
   // };
 
-  console.log(customerInfo);
+  // console.log(customerInfo);
 
   return (
     <div className="h-100 p-3">
