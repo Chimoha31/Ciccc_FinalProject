@@ -46,7 +46,7 @@ const App = () => {
           />
 
           <Route
-            path="/bookinglist"
+            path="/admin/bookings"
             element={
               <ProtectedRoute>
                 <BookingList />
@@ -54,7 +54,7 @@ const App = () => {
             }
           />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/admin/bookings" element={<BookingList />} />
+          {/* <Route path="/admin/bookings" element={<BookingList />} /> */}
         </Routes>
         <Footer />
       </div>
