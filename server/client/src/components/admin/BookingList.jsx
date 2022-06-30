@@ -60,9 +60,9 @@ const BookingList = () => {
           </tr>
         </thead>
         <tbody>
-          {customerInfo.map((info, index) => (
+          {customerInfo.map((info) => (
             <tr key={info._id}>
-              <td>{index + 1}</td>
+              {/* <td>{index + 1}</td> */}
               <td>{info.contact?.fullName}</td>
               <td>{info.contact?.email}</td>
               <td>{info.startDate.substring(0, 10)}</td>
