@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 2000;
 // middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static("build"))
 
 // Connect MongoDB
 const mongo_URL = process.env.MONGDB_URL;
