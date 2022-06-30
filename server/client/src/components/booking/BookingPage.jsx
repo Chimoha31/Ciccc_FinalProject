@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
 import "../../styles/booking/BookingPage.scss";
 import { UserAuth } from "../../context/AuthContext";
-import Confirm from "../booking/Confirm";
+import Confirm from "./Confirm";
 import axios from "axios";
 
 const BookingPage = ({ bookingInfo }) => {

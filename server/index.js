@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-
+const path = require("path");
 const UserRoutes = require("./routes/user");
 const BookingRoutes = require("./routes/booking");
 const RoomRoutes = require("./routes/room");
@@ -13,7 +13,13 @@ const PORT = process.env.PORT || 2000;
 // middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static("build"))
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+
+
+// Extra thing
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+})
 
 // Connect MongoDB
 const mongo_URL = process.env.MONGDB_URL;
