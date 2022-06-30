@@ -16,7 +16,6 @@ export const AuthContextProvider = ({ children }) => {
 
   // Sign Up
   const signUp = (email, password) => {
-    console.log(process.env.REACT_APP_API, "api key");
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
