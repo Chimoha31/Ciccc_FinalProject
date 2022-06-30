@@ -46,7 +46,7 @@ const App = () => {
           />
 
           <Route
-            path="/admin/bookings"
+            path="/bookinglist"
             element={
               <ProtectedRoute>
                 <BookingList />
