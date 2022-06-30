@@ -16,7 +16,7 @@ const BookingPage = ({ bookingInfo }) => {
     try {
       if (customerName !== "" && customerPhone !== "") {
         await axios.put(
-          `http://localhost:2000/api/v1/bookings/${bookingInfo._id}`,
+          `https://bookinghotel01.herokuapp.com/api/v1/bookings/${bookingInfo._id}`,
           {
             contact: {
               fullName: customerName,

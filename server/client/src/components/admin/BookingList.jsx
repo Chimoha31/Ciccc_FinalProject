@@ -7,7 +7,7 @@ const BookingList = () => {
 
   const getCustomerData = async () => {
     await axios
-      .get("http://localhost:2000/api/v1/bookings")
+      .get("https://bookinghotel01.herokuapp.com/api/v1/bookings")
       .then((res) => {
         setCustomerInfo(res.data.data);
       })
@@ -22,7 +22,7 @@ const BookingList = () => {
 
   const handleCancel = async (id) => {
     await axios
-      .delete(`http://localhost:2000/api/v1/bookings/${id}`)
+      .delete(`https://bookinghotel01.herokuapp.com/api/v1/bookings/${id}`)
       .then((res) => {
         getCustomerData();
       })
@@ -32,7 +32,7 @@ const BookingList = () => {
   };
   // const handleDelete = async (id) => {
   //   await axios
-  //     .delete(`http://localhost:2000/api/v1/bookings/${id}`)
+  //     .delete(`https://bookinghotel01.herokuapp.com/api/v1/bookings/${id}`)
   //     .then((res) => {
   //       getCustomerData();
   //     })
@@ -70,9 +70,11 @@ const BookingList = () => {
               <td>{info.roomType}</td>
               <td>{info.status}</td>
               <td>{info.totalPrice} CAD</td>
-              {info.status !== "cancel" ?
-                <td onClick={() => handleCancel(info._id)}>❌</td> : <td></td>
-              }
+              {info.status !== "cancel" ? (
+                <td onClick={() => handleCancel(info._id)}>❌</td>
+              ) : (
+                <td></td>
+              )}
               {/* <td onClick={() => handleDelete(info._id)}>🗑</td> */}
             </tr>
           ))}

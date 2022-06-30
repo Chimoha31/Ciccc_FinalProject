@@ -9,7 +9,6 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import axios from "axios";
 
-
 const SearchForBook = ({ name, setBookingInfo }) => {
   const { user } = UserAuth();
   const navigate = useNavigate();
@@ -56,7 +55,7 @@ const SearchForBook = ({ name, setBookingInfo }) => {
       navigate("/");
     } else if (user) {
       const response = await axios.post(
-        "http://localhost:2000/api/v1/bookings",
+        "https://bookinghotel01.herokuapp.com/api/v1/bookings",
         {
           startDate: date[0].startDate,
           endDate: date[0].endDate,
