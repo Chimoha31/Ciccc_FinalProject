@@ -60,9 +60,9 @@ const BookingList = () => {
           </tr>
         </thead>
         <tbody>
-          {customerInfo.map((info) => (
+          {customerInfo.map((info, index) => (
             <tr key={info._id}>
-              {/* <td>{index + 1}</td> */}
+              <td>{index + 1}</td>
               <td>{info.contact?.fullName}</td>
               <td>{info.contact?.email}</td>
               <td>{info.startDate.substring(0, 10)}</td>
@@ -75,7 +75,6 @@ const BookingList = () => {
               ) : (
                 <td></td>
               )}
-              {/* <td onClick={() => handleDelete(info._id)}>🗑</td> */}
             </tr>
           ))}
         </tbody>

@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
 
       {/* copy right */}
-      <p className="text-center mb-0 mt-5">All Rights Reserved &copy; Chiho & Ceci</p>
+      <p className="text-center mb-0 mt-5">&copy;2022 Chiho & Ceci - All Rights Reserved</p>
     </div>
   );
 };
